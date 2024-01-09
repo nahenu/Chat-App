@@ -38,7 +38,7 @@ const server = app.listen(process.env.PORT, () =>
 );
 const io = socket(server, {
   cors: {
-    origin: "https://chat-app-frontend-gold-nine.vercel.app",
+    origin: "https://chat-app-frontend-nine-bice.vercel.app",
     credentials: true,
   },
 });
