@@ -17,7 +17,7 @@ app.use(cors({
 app.use(express.json());
 
 mongoose
-  .connect(process.env.MONGO_URL)
+  .connect("mongodb+srv://arpitgoyal841:chatapibackend@cluster0.70d8dwg.mongodb.net/mern-chat?retryWrites=true&w=majority")
   .then(() => {
     console.log("DB Connetion Successfull");
   })
