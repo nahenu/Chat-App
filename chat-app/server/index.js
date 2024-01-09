@@ -8,7 +8,7 @@ const socket = require("socket.io");
 require("dotenv").config();
 
 app.use(cors({
-  origin:["https://social-mern-frontend.vercel.app"],
+  origin:["https://chat-app-frontend-gold-nine.vercel.app"],
   methods:["POST","GET"],
   credentials:true
   
@@ -28,12 +28,12 @@ mongoose
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
 
-const server = app.listen(process.env.PORT, () =>
-  console.log(`Server started on ${process.env.PORT}`)
+const server = app.listen(5000, () =>
+  console.log(`Server started on ${5000}`)
 );
 const io = socket(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://chat-app-frontend-gold-nine.vercel.app",
     credentials: true,
   },
 });
