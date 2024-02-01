@@ -27,7 +27,7 @@ export default function Chat() {
   }, []);
   useEffect(() => {
     if (currentUser) {
-      socket.current = io(host);
+      socket.current = io("https://chat-app-jade-three.vercel.app");
       socket.current.emit("add-user", currentUser._id);
     }
   }, [currentUser]);
